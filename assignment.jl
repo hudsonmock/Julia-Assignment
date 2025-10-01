@@ -1,5 +1,9 @@
-using Pkg
+using Pkg # install packages
 Pkg.add.(["DataFrames","CSV", "Statistics", "MLJ", "BetaML"])
+
+# Import modules
+using CSV, DataFrames, MLJ, BetaML, Statistics, StatsBase
+import MLJ: partition, fit!, predict, accuracy
 
 df = CSV.read("bank-loan-dataset.csv", DataFrame)
 
