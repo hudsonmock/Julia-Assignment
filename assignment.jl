@@ -23,7 +23,7 @@ rf = machine(forest, x_train, y_train)
 MLJ.fit!(rf)
 
 y_hat = MLJ.predict(rf, x_test)
-y_hat = MLJ.mode.(y_hat)  # convert probabilistic predictions to deterministic ones (ones with highest probability)
+y_hat = MLJ.mode.(y_hat)  # convert probabilistic predictions to ones with highest probability
 
 # metrics
 accuracy = MLJ.accuracy(y_hat, y_test) # compare accuracy in predicted vs actual
