@@ -1,5 +1,5 @@
 using Pkg
-Pkg.add.(["DataFrames","CSV", "Statistics"])
+Pkg.add.(["DataFrames","CSV", "Statistics", "MLJ", "BetaML"])
 
 df = CSV.read("bank-loan-dataset.csv", DataFrame)
 
