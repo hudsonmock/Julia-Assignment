@@ -22,7 +22,7 @@ x_test = x[test, :]
 y_test = y[test]
  
 model = @load RandomForestClassifier verbosity=0 pkg=BetaML
-forest = model()
+forest = model(n_trees=50)
 
 rf = machine(forest, x_train, y_train)
 
